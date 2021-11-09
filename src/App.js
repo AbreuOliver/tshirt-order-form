@@ -20,14 +20,14 @@ export default class App extends React.Component {
 	this.state = {
 		name: "",
 		FridayTimes: [
-		{
-			id: 1,
-			time: "03:00 PM - 04:00 PM"
-		},
-		{
-			id: 2,
-			time: "04:00 PM - 05:00 PM"
-		},
+		// {
+		// 	id: 1,
+		// 	time: "03:00 PM - 04:00 PM"
+		// },
+		// {
+		// 	id: 2,
+		// 	time: "04:00 PM - 05:00 PM"
+		// },
 		{
 			id: 3,
 			time: "05:00 PM - 06:25 PM"
@@ -38,14 +38,14 @@ export default class App extends React.Component {
 		}
 		],
 		SaturdayTimes: [
-		{
-			id: 5,
-			time: `08:00 AM - 08:55 AM`
-		},
-		{
-			id: 6,
-			time: "10:20 AM - 11:05 AM"
-		},
+		// {
+		// 	id: 5,
+		// 	time: `08:00 AM - 08:55 AM`
+		// },
+		// {
+		// 	id: 6,
+		// 	time: "10:20 AM - 11:05 AM"
+		// },
 		{
 			id: 7,
 			time: "12:00 PM - 12:45 PM"
@@ -95,7 +95,7 @@ export default class App extends React.Component {
 			});
 			setTimeout(function () {
 				window.location.reload(false);
-			}, 5000);
+			}, 2000);
 			alert(
 				`Thank you for your willingness to serve during ${
 				this.state.selected.length
