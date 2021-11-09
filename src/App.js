@@ -95,7 +95,7 @@ export default class App extends React.Component {
 			});
 			setTimeout(function () {
 				window.location.reload(false);
-			}, 1500);
+			}, 5000);
 			alert(
 				`Thank you for your willingness to serve during ${
 				this.state.selected.length
