@@ -97,9 +97,7 @@ export default class App extends React.Component {
 				window.location.reload(false);
 			}, 1500);
 			alert(
-				`Thank you, ${
-				this.state.name.split(" ")[0].charAt(0).toUpperCase()
-				}, for your willingness to serve during ${
+				`Thank you for your willingness to serve during ${
 				this.state.selected.length
 				} time slot(s)!`
 			);
