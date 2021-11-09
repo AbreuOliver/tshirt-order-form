@@ -28,10 +28,10 @@ export default class App extends React.Component {
 		// 	id: 2,
 		// 	time: "04:00 PM - 05:00 PM"
 		// },
-		{
-			id: 3,
-			time: "05:00 PM - 06:25 PM"
-		},
+		// {
+		// 	id: 3,
+		// 	time: "05:00 PM - 06:25 PM"
+		// },
 		{
 			id: 4,
 			time: "08:30 PM - 09:30 PM"
@@ -50,10 +50,10 @@ export default class App extends React.Component {
 			id: 7,
 			time: "12:00 PM - 12:45 PM"
 		},
-		{
-			id: 8,
-			time: "12:45 PM - 01:30 PM"
-		},
+		// {
+		// 	id: 8,
+		// 	time: "12:45 PM - 01:30 PM"
+		// },
 		{
 			id: 9,
 			time: "03:25 PM - 04:30 PM"
