@@ -528,9 +528,7 @@ export default class App extends React.Component {
 								>
 								{this.state.shirtSizes.map((item) => {
 									return (
-									<option 
-										// value={this.state.selectedShirtSize}
-									>
+									<option >
 										{item.size}
 									</option>
 
@@ -538,8 +536,21 @@ export default class App extends React.Component {
 								})}
 							</Select>
 						</Box>
+						
 					</Box>
-					<Box pt={8}>
+					<Box pt={0}>
+						<FormHelperText
+								color="gray.500"
+								fontSize="md"
+								textTransform="none"
+								pb={8}
+								width="95%"
+								textAlign="center"
+							>
+								This page will refresh <br /> 
+								automatically after cancellation <br /> 
+								or successful submission.
+							</FormHelperText>
 						<VStack pl={0} spacing={5} pb={10}>
 						<Button
 							width="100%"
@@ -560,12 +571,13 @@ export default class App extends React.Component {
 							width="100%"
 							bgColor="#142a35"
 							color="white"
+							height="50px"
 							variant="solid"
 							_hover={{
 							transform: "scale(1.125)"
 							}}
 						>
-							Submit Form
+							Log Shirt Order
 						</Button>
 						</VStack>
 					</Box>
