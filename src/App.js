@@ -130,11 +130,14 @@ export default class App extends React.Component {
 					backgroundColor="#f1f1f3"
 					color="gray.700"
 				>
-					<Center>
+					<Center
+						// border="2px"
+						// borderColor="purple.600"
+					>
 					<FormControl p={2}>
 					<Box
 						p={5}
-						maxW="sm"
+						maxW="2xl"
 						borderWidth="1px"
 						borderRadius="lg"
 						overflow="hidden"
