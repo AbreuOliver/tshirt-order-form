@@ -1,1 +1,3 @@
-A registration form for volunteers of the 2021 Beacon Baptist Church Ladies Retreat
+# A simple order form for taking Ladies Retreat shirt orders
+
+This project can currently be found [here](lr-shirt-registration.netlify.app)
