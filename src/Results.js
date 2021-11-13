@@ -2,20 +2,11 @@ import {
 	Flex,
 	FormLabel,
 	Box,
-	FormHelperText,
-    HStack,
 	VStack,
 	Center,
-	Divider,
-    Accordion,
-    AccordionItem,
-    AccordionHeader,
-    AccordionPanel,
-    AccordionIcon,
     Badge,
 } from "@chakra-ui/react";
 import { db } from "./firebase";
-import moment from "moment";
 import React, { useState, useEffect } from 'react';
 
 
@@ -47,21 +38,15 @@ export default function Results() {
 
     // console.log("Orders:", orders)
     const propertyNames = Object.keys(orders)
-    // console.log("Property Names", propertyNames);
+    console.log("Property Names", propertyNames);
     const propertyValues = Object.values(orders);
     // console.log("Property Values", propertyValues);
     // console.log("orders.orders", propertyValues[0]);
-
-    const input = propertyValues.phoneNumber;
-
-    console.log("Formatted phone number:", input)
 
     let result = propertyValues.filter(function({orderId}) {
         return !this.has(orderId) && this.add(orderId);
     }, new Set)
     
-    // console.log(result)
-
     useEffect(() => {
         fetchOrders();
     }, [])
@@ -138,11 +123,12 @@ export default function Results() {
                                         </Box>
 
                                         <Box
-                                        mt="1"
-                                        fontWeight="semibold"
-                                        as="h4"
-                                        lineHeight="tight"
-                                        isTruncated
+                                            mt="1"
+                                            fontWeight="semibold"
+                                            as="h4"
+                                            lineHeight="tight"
+                                            isTruncated
+                                            fontSize="lg"
                                         >
                                         {order.firstName} {""} {order.lastName}
                                         </Box>

@@ -459,9 +459,7 @@ export default class App extends React.Component {
 										width="100%"
 										border="1px"
 										borderColor="gray.300"
-										inputprops={{
-											maxLength: 5,
-										}}
+										
 										_placeholder={{ 
 											color: 'gray.500', 
 											fontWeight: "normal"
@@ -504,9 +502,6 @@ export default class App extends React.Component {
 								width="100%"
 								border="1px"
 								borderColor="gray.300"
-								inputProps={{
-									maxLength: 5,
-								}}
 								_placeholder={{ 
 									color: 'gray.300', 
 									fontWeight: "normal"
@@ -561,7 +556,7 @@ export default class App extends React.Component {
 								>
 								{this.state.shirtSizes.map((item) => {
 									return (
-									<option >
+									<option key={item.orderId}>
 										{item.size}
 									</option>
 
@@ -573,14 +568,13 @@ export default class App extends React.Component {
 					</Box>
 					<Box pt={0}>
 						<FormHelperText
-							textAlign="left"
-								color="gray.500"
-								fontSize="md"
-								textTransform="none"
-								pb={8}
-								width="95%"
-								textAlign="center"
-							>
+							color="gray.500"
+							fontSize="md"
+							textTransform="none"
+							pb={8}
+							width="95%"
+							textAlign="center"
+						>
 								This page will refresh <br /> 
 								automatically after cancellation <br /> 
 								or successful submission.
