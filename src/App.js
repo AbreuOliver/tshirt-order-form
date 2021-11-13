@@ -127,7 +127,7 @@ export default class App extends React.Component {
 				isFitted
 				defaultIndex={0}
 			>
-				<TabList width="30%">
+				<TabList maxW="2xl">
 					<Tab 
 						_selected={{
 							color: "#142a35",

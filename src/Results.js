@@ -60,13 +60,18 @@ export default function Results() {
             backgroundColor="#f1f1f3"
             color="gray.700"
             textAlign="center"
+            width="2xl"
+            pl={5}
+            pr={5}
         >
             <Center>
                 <Box
+                    width="80vw"
+                    pl={5}
+                    pr={5}
+                    minW="580px"
                     p={5}
                     pb={7}
-                    maxW="95vw"
-                    minW="55vw"
                     borderWidth="1px"
                     borderRadius="lg"
                     overflow="hidden"
@@ -77,7 +82,11 @@ export default function Results() {
                     alignItems="center"
                     justifyContent="center"					
                 >
-                    <Box 
+                    <Box
+                        width="80vw"
+                        pl={5}
+                        pr={5}
+                        minW="580px" 
                         p={4}
                         mb={-5}
                     >
@@ -98,20 +107,29 @@ export default function Results() {
                         ( order => {
                         return(
                             <Center>
-                                <Box 
-                                    maxW="95vw"
-                                    minW="55vw"
+                                <Box
+                                    width="80vw"
+                                    pl={5}
+                                    pr={5}
+                                    minW="580px" 
                                     borderRadius="lg"
                                     overflow="hidden"
                                     bg="gray.100"
                                     border="1px"
                                     borderColor="gray.500" 
-                                    width="100%"
                                     mb={5}
                                     height="100%"
                                 >
-                                    <Box p="6">
-                                        <Box display="flex" alignItems="baseline">
+                                    <Box
+                                        width="80vw"
+                                        pl={5}
+                                        pr={5}
+                                        minW="580px" p="6">
+                                        <Box
+                                            width="80vw"
+                                            pl={5}
+                                            pr={5}
+                                            minW="580px" display="flex" alignItems="baseline">
                                         <Badge 
                                             borderRadius="full" 
                                             px="3"
@@ -123,6 +141,10 @@ export default function Results() {
                                         </Box>
 
                                         <Box
+                                            width="80vw"
+                                            pl={5}
+                                            pr={5}
+                                            minW="580px"
                                             mt="1"
                                             fontWeight="semibold"
                                             as="h4"
@@ -133,13 +155,25 @@ export default function Results() {
                                         {order.firstName} {""} {order.lastName}
                                         </Box>
                                         <VStack p={1}>                                        
-                                            <Box as="span" color="gray.600" fontSize="md" mb={-2}>
+                                            <Box
+                                                width="80vw"
+                                                pl={5}
+                                                pr={5}
+                                                minW="580px" as="span" color="gray.600" fontSize="md" mb={-2}>
                                                 {order.address1} {order.address2}
                                             </Box> 
-                                            <Box as="span" color="gray.600" fontSize="md">
+                                            <Box
+                                                width="80vw"
+                                                pl={5}
+                                                pr={5}
+                                                minW="580px" as="span" color="gray.600" fontSize="md">
                                                 {order.city}, {order.state} {order.zip} 
                                             </Box>
-                                            <Box as="span" color="gray.600" fontSize="md">
+                                            <Box
+                                                width="80vw"
+                                                pl={5}
+                                                pr={5}
+                                                minW="580px" as="span" color="gray.600" fontSize="md">
                                                 {order.phoneNumber} 
                                                 {/* {formatPhoneNumber} */}
                                             </Box> 
