@@ -111,7 +111,6 @@ export default function Results() {
                                     width="80vw"
                                     pl={5}
                                     pr={5}
-                                    minW="580px" 
                                     borderRadius="lg"
                                     overflow="hidden"
                                     bg="gray.100"
