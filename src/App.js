@@ -11,8 +11,14 @@ import {
 	Center,
 	Select,
 	Divider,
+	Tabs,
+	TabList,
+	Tab,
+	TabPanel,
+	TabPanels,
 } from "@chakra-ui/react";
 import { db } from "./firebase";
+import Results from "./Results";
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -107,33 +113,49 @@ export default class App extends React.Component {
 	window.location.reload(false);
 	}
 	render() {
-	console.log(
-		"First Name:", `${this.state.firstName} \n`,
-		"Last Name:", `${this.state.lastName} \n`,
-		"Address 1", `${this.state.address1} \n`,
-		"Address 2", `${this.state.address2} \n`,
-		"City", `${this.state.city} \n`,
-		"State", `${this.state.state} \n`,
-		"ZIP", `${this.state.zipCode} \n`,
-		"Shirt Size", `${this.state.selectedShirtSize} \n`,
-	)
-	console.log("Shirt Size", this.state.selected[this.state.selected.length-1]);
 		return (
+			<Tabs 
+				pt="135px"
+				minHeight="100vh"
+				maxHeight="100%"
+				flexDirection="column"
+				alignItems="center"
+				justifyContent="center"
+				backgroundColor="#f1f1f3"
+				color="gray.700"
+				align="center"
+				isFitted
+				defaultIndex={0}
+			>
+				<TabList width="30%">
+					<Tab 
+						_selected={{
+							color: "#142a35",
+							fontWeight: "bold"
+						}}
+					>
+						Place Orders
+					</Tab>
+					<Tab
+						_selected={{
+							color: "#142a35",
+							fontWeight: "bold"
+						}}
+					>
+						View Orders
+					</Tab>
+				</TabList>
+				<TabPanels>
+					<TabPanel>
 			<form className="App" onSubmit={this.handleSubmit}>
 				<Flex
-					pt="135px"
-					minHeight="100vh"
-					maxHeight="100%"
 					flexDirection="column"
 					alignItems="center"
 					justifyContent="center"
 					backgroundColor="#f1f1f3"
 					color="gray.700"
 				>
-					<Center
-						// border="2px"
-						// borderColor="purple.600"
-					>
+					<Center>
 					<FormControl p={2}>
 					<Box
 						p={5}
@@ -153,6 +175,7 @@ export default class App extends React.Component {
 						</Box>
 						<Box pl={4} pr={5} pb={1}>
 							<FormHelperText
+								textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -167,14 +190,14 @@ export default class App extends React.Component {
 								mb={3}
 								name="firstName"
 								fontWeight="bold"
-								placeholder="Laura"
+								placeholder="Cara"
 								textTransform="capitalize"
 								isRequired
 								width="100%"
 								border="1px"
 								borderColor="gray.300"
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -186,6 +209,7 @@ export default class App extends React.Component {
 								}}
 							/>
 							<FormHelperText
+								textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -200,14 +224,14 @@ export default class App extends React.Component {
 								color="#367882"
 								fontWeight="bold"
 								mb={3}
-								placeholder="Rabon"
+								placeholder="Abreu"
 								textTransform="capitalize"
 								isRequired
 								width="100%"
 								border="1px"
 								borderColor="gray.300"
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -223,6 +247,7 @@ export default class App extends React.Component {
 						<Box p={4}>
 							<FormLabel fontSize="xl">Address</FormLabel>
 							<FormHelperText
+								textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -246,7 +271,7 @@ export default class App extends React.Component {
 								border="1px"
 								borderColor="gray.300"
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -270,7 +295,7 @@ export default class App extends React.Component {
 								border="1px"
 								borderColor="gray.300"
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -282,6 +307,7 @@ export default class App extends React.Component {
 								}}
 							/>
 							<FormHelperText
+								textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -303,7 +329,7 @@ export default class App extends React.Component {
 								border="1px"
 								borderColor="gray.300"
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -322,6 +348,7 @@ export default class App extends React.Component {
 									mr={5}
 								>
 									<FormHelperText
+										textAlign="left"
 										color="gray.500"
 										fontSize="md"
 										textTransform="none"
@@ -411,6 +438,7 @@ export default class App extends React.Component {
 									width="45%"
 								>
 									<FormHelperText
+										textAlign="left"
 										color="gray.500"
 										fontSize="md"
 										textTransform="none"
@@ -453,6 +481,7 @@ export default class App extends React.Component {
 						<Box p={4}>
 							<FormLabel fontSize="xl">Phone Number</FormLabel>
 							<FormHelperText
+								textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -479,7 +508,7 @@ export default class App extends React.Component {
 									maxLength: 5,
 								}}
 								_placeholder={{ 
-									color: 'gray.500', 
+									color: 'gray.300', 
 									fontWeight: "normal"
 								}}
 								_active={{
@@ -495,6 +524,7 @@ export default class App extends React.Component {
 						<Box p={4}>
 						<FormLabel fontSize="xl">Shirt</FormLabel>
 						<FormHelperText
+							textAlign="left"
 							color="gray.500"
 							fontSize="md"
 							textTransform="none"
@@ -543,6 +573,7 @@ export default class App extends React.Component {
 					</Box>
 					<Box pt={0}>
 						<FormHelperText
+							textAlign="left"
 								color="gray.500"
 								fontSize="md"
 								textTransform="none"
@@ -588,6 +619,12 @@ export default class App extends React.Component {
 					</Center>
 				</Flex>
 			</form>
+					</TabPanel>
+				<TabPanel>
+					<Results />
+				</TabPanel>
+			</TabPanels>
+		</Tabs>
 		);
 	};
 };
